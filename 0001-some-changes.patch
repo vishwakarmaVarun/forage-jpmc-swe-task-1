@@ -1,0 +1,30 @@
+From 55321f21a482384d00ecb435bf2172f0242b3639 Mon Sep 17 00:00:00 2001
+From: varun vishwakarma <varun@webwithvarun.com>
+Date: Tue, 10 Sep 2024 16:10:11 +0530
+Subject: [PATCH] some changes
+
+---
+ client3.py | 10 +---------
+ 1 file changed, 1 insertion(+), 9 deletions(-)
+
+diff --git a/client3.py b/client3.py
+index e22c972..29c2321 100644
+--- a/client3.py
++++ b/client3.py
+@@ -59,12 +59,4 @@ if __name__ == "__main__":
+             prices[stock] = price
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-        stock_list = list(prices.keys())
+-        if len(stock_list) >= 2:
+-            ratio = getRatio(prices[stock_list[0]], prices[stock_list[1]])
+-            if ratio is not None:
+-                print("Ratio of %s to %s: %s" % (stock_list[0], stock_list[1], ratio))
+-            else:
+-                print("Ratio cannot be calculated due to division by zero.")
+-        else:
+-            print("Not enough stocks to calculate the ratio.")
++        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
+-- 
+2.41.0.windows.1
+
