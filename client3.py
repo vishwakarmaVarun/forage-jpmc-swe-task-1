@@ -59,12 +59,4 @@ if __name__ == "__main__":
             prices[stock] = price
             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
 
-        stock_list = list(prices.keys())
-        if len(stock_list) >= 2:
-            ratio = getRatio(prices[stock_list[0]], prices[stock_list[1]])
-            if ratio is not None:
-                print("Ratio of %s to %s: %s" % (stock_list[0], stock_list[1], ratio))
-            else:
-                print("Ratio cannot be calculated due to division by zero.")
-        else:
-            print("Not enough stocks to calculate the ratio.")
+        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
